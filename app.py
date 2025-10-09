@@ -14,5 +14,6 @@ while isitem == False:
         if choice == item["name"]:
             print(f"You have purchased one {item["name"]} for ${item["price"]}")
             isitem = True
+            again = input("")
     if isitem == False:
         print ("Try again")
