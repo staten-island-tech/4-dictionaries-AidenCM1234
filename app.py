@@ -4,8 +4,8 @@ dict_kangaroo = {"name":"Kangaroo","price":559.99,"brand":"Austrila"}
 
 store=[dict_apple, dict_pear, dict_kangaroo]
 for item in store:
-    print (f"{item["name"]} ${item["price"]} ({item["brand"]})")
-#print(store)
+    print (f"{item ["name"]}")#  ${item ["price"]} {item ["brand"]}")
+print(store)
 
 isitem = False
 done = False
