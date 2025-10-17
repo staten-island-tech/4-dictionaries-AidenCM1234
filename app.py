@@ -2,7 +2,8 @@ store=[{'name':"Apple",'price':5.0,'brand':"ShopRite"},
 {'name':"Pear",'price':4.0,'brand':"KirkLand"},
 {'name':"Kangaroo",'price':559.99,'brand':"Austrila"}]
 for index, item in enumerate(store):
-    print (f"{item['name']}, ${item['price']}, {item['brand']}")
+    print (f"{item['name']} ${item['price']}, {item['brand']}")
+    print(index, ":", item["name"])
 
     #print (f"store {item}[name]")
     #print (f"{item} ['name'] ${item ['price]'} {item ["brand"]}")
