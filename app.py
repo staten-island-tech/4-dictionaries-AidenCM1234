@@ -15,10 +15,10 @@ while done == False:
     while isitem == False:
         choice = input("Please choose one item to purchase: ")
         for item in store:
-            if choice == item["name"] or index:
+            if choice == item["name"]:# or index:
                 print(f"You have purchased one {item["name"]} for ${item["price"]}")
                 #isitem = True
-                cart.append('name')
+                cart.append({'name'})
                 again = input("Would you like to purchase more Y or N: ")
                 if again == "N" or again == "n":
                     print (f"You have bought {cart}")
