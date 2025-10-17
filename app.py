@@ -8,7 +8,7 @@ for index, item in enumerate(store):
     #print (f"{item} ['name'] ${item ['price]'} {item ["brand"]}")
 #print(store)
 
-history=[]
+cart=[]
 isitem = False
 done = False
 while done == False:
@@ -18,11 +18,12 @@ while done == False:
             if choice == item["name"] or index:
                 print(f"You have purchased one {item["name"]} for ${item["price"]}")
                 #isitem = True
-                history.append('name')
+                cart.append('name')
                 again = input("Would you like to purchase more Y or N: ")
                 if again == "N" or again == "n":
+                    print (f"You have bought {cart}")
                     done = True
-                    print (f"You have bought {history}")
+                    
         if isitem == False:
             print ("Try again")
 
