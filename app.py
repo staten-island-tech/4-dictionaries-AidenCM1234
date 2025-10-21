@@ -17,13 +17,14 @@ while done == False:
         for item in store:
             if choice == item["name"]:# or index:
                 print(f"You have purchased one {item["name"]} for ${item["price"]}")
-                #isitem = True
-                cart.append({'name'})
+                isitem = True
+                select = (choice)
+                cart.append (choice)#({item["name"]}, {item["price"]})
                 again = input("Would you like to purchase more Y or N: ")
                 if again == "N" or again == "n":
                     print (f"You have bought {cart}")
                     done = True
                     
-        if isitem == False:
-            print ("Try again")
+            if isitem == False:
+                print ("Try again")
 
