@@ -13,7 +13,7 @@ isitem = False
 done = False
 while done == False:
     while isitem == False:
-        choice = int.input("Please choose one item to purchase: ")
+        choice = input("Please choose one item to purchase: ")
         for item in store:
             if choice == item["name"] or {index}:
                 print(f"You have purchased one {item["name"]} for ${item["price"]}")
