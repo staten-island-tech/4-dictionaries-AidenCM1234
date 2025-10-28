@@ -29,4 +29,4 @@ def casino (x,a,b,c):
         if x<=-1:
             y-=1
     print(f"Martha plays {y} times before going broke.")
-casino(1000,-10000,-10000,-10000)
+casino(1,4,9,3)
