@@ -1,3 +1,40 @@
+<<<<<<< HEAD
+store = [
+    {'name': "Apple", 'price': 5.0, 'brand': "ShopRite"},
+    {'name': "Pear", 'price': 4.0, 'brand': "KirkLand"},
+    {'name': "Kangaroo", 'price': 559.99, 'brand': "Austrila"}
+]
+
+=======
+"""store=[{'name':"Apple",'price':5.0,'brand':"ShopRite"},
+{'name':"Pear",'price':4.0,'brand':"KirkLand"},
+{'name':"Kangaroo",'price':559.99,'brand':"Austrila"}]
+>>>>>>> 3a2fc7009a595adc98f8db2b1a96286ce1c8a533
+for index, item in enumerate(store):
+    print(f"{index}: {item['name']} ${item['price']}, {item['brand']}")
+
+cart = []
+total = 0
+done = False
+<<<<<<< HEAD
+=======
+while done == False:
+    while isitem == False:
+        choice = input("Please choose one item to purchase: ")
+        for item in store:
+            if choice == item["name"] or {index}:
+                print(f"You have purchased one {item["name"]} for ${item["price"]}")
+                isitem = True
+                select = (choice)
+                cart.append (select)#({item["name"]}, {item["price"]})
+                again = input("Would you like to purchase more Y or N: ")
+                if again == "N" or again == "n":
+                    print (f"You have bought {cart}")
+                    done = True
+                    
+            if isitem == False:
+                print ("Try again")
+"""
 store = [
     {'name': "Apple", 'price': 5.0, 'brand': "ShopRite"},
     {'name': "Pear", 'price': 4.0, 'brand': "KirkLand"},
@@ -8,8 +45,35 @@ for index, item in enumerate(store):
     print(f"{index}: {item['name']} ${item['price']}, {item['brand']}")
 
 cart = []
-total = 0
 done = False
+
+while not done:
+    isitem = False
+    while not isitem:
+        choice = input("Please choose one item to purchase: ")
+        
+        for item in store:
+            if choice == item["name"]: 
+                print(f"You have purchased one {item['name']} for ${item['price']}")
+                cart.append(f"{item['name']} - ${item['price']}")
+                isitem = True
+        
+        if not isitem:  
+            print("Try again")
+
+
+    again = input("Would you like to purchase more items? (Y/N): ")
+    if again == 'N':
+        done = True  
+print("Your cart:")
+for item in cart:
+    print(item)
+print("Thank you for wasting your money")
+
+
+
+
+>>>>>>> 3a2fc7009a595adc98f8db2b1a96286ce1c8a533
 
 while not done:
     isitem = False
