@@ -1,4 +1,4 @@
-store=[{'name':"Apple",'price':5.0,'brand':"ShopRite"},
+"""store=[{'name':"Apple",'price':5.0,'brand':"ShopRite"},
 {'name':"Pear",'price':4.0,'brand':"KirkLand"},
 {'name':"Kangaroo",'price':559.99,'brand':"Austrila"}]
 for index, item in enumerate(store):
@@ -27,4 +27,43 @@ while done == False:
                     
             if isitem == False:
                 print ("Try again")
+"""
+store = [
+    {'name': "Apple", 'price': 5.0, 'brand': "ShopRite"},
+    {'name': "Pear", 'price': 4.0, 'brand': "KirkLand"},
+    {'name': "Kangaroo", 'price': 559.99, 'brand': "Austrila"}
+]
 
+# Display store items
+for index, item in enumerate(store):
+    print(f"{index}: {item['name']} ${item['price']}, {item['brand']}")
+
+cart = []
+done = False
+
+while not done:
+    isitem = False
+    while not isitem:
+        choice = input("Please choose one item to purchase: ").strip()
+        
+        # Check if the user input matches an item in the store
+        for item in store:
+            if choice.lower() == item["name"].lower():  # Case-insensitive match
+                print(f"You have purchased one {item['name']} for ${item['price']}")
+                cart.append(f"{item['name']} - ${item['price']}")
+                isitem = True
+                break  # Exit the loop once a valid item is found
+        
+        if not isitem:  # If no valid item is found, ask to try again
+            print("Item not found, please try again.")
+
+    # Ask the user if they want to continue shopping
+    again = input("Would you like to purchase more items? (Y/N): ").strip().lower()
+    if again == 'n':
+        done = True  # Exit the loop when the user is done shopping
+
+# Final cart summary
+print("\nYour shopping cart:")
+for item in cart:
+    print(item)
+print("Thank you for shopping!")
