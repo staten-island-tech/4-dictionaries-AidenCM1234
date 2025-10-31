@@ -9,7 +9,7 @@ for index, item in enumerate(store):
 
 cart = []
 done = False
-
+total=0
 
 while not done:
     isitem = False
