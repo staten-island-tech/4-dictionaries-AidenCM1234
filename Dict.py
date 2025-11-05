@@ -25,14 +25,19 @@ while not done:
         
         if not isitem:  
             print("Try again")
-
-
-    again = input("Would you like to purchase more items? (Y/N): ")
-    if again == 'N':
-        done = True  
+    a=False
+    while not a:
+        again = input("Would you like to purchase more items? (Y/N): ")
+        if again == 'N':
+            done = True
+            a=True 
+        elif again == 'Y':
+            a=True
+        elif again != 'N' or 'Y':
+            print("Try again")
 
 print("Your cart:")
 for item in cart:
     print(item)
-print (f"Total:{total}")
+print (f"Total: {total}")
 print("Thank you for wasting your money")
