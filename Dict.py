@@ -5,7 +5,7 @@ store = [
 ]
 
 for index, item in enumerate(store):
-    print(f"{index}: {item['name']} ${item['price']}, {item['brand']}")
+    print(f" {item['name']} ${item['price']}, {item['brand']}")
 
 cart = []
 done = False
@@ -39,5 +39,5 @@ while not done:
 print("Your cart:")
 for item in cart:
     print(item)
-print (f"Total: {total}")
+print (f"Total: ${total}")
 print("Thank you for wasting your money")
